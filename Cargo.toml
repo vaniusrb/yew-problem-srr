@@ -23,3 +23,11 @@ tower-http = { version = "0.3", features = ["fs", "cors", "add-extension"] }
 [features]
 hydration = ["yew/hydration"]
 ssr = ["yew/ssr", "yew/tokio"]
+
+[[bin]]
+required-features = ["hydration"]
+name = "simple_ssr_hydrate"
+
+[[bin]]
+name = "simple_ssr_server"
+required-features = ["ssr"]
