@@ -42,7 +42,7 @@ async fn render(
                 queries,
             };
 
-            let renderer = yew::ServerRenderer::<ServerApp>::with_props(server_app_props);
+            let renderer = yew::LocalServerRenderer::<ServerApp>::with_props(server_app_props);
 
             renderer.render().await
         })
